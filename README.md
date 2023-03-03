@@ -1,6 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
+
+This version of Next.js requires node 14.
 
 First, run the development server:
 
@@ -20,13 +20,32 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ### Tailwind
 
-```
-npx tailwindcss -i ./src/styles/globals.css -o ./public/dist/output.css --watch
-```
+This project also utilizes [Tailwind CSS](https://tailwindcss.com).
+
+Please style your components using Tailwind classes ONLY.
+
+**DO NOT create custom CSS classes unless absolutely necessary.**
+
+I would recommend reading their docs and installing their editor plugin for editor hinting.
 
 https://tailwindcss.com/docs/editor-setup
 
 ## Requirements
+
+You are to re-create a new dashboard page using **ONLY NextJS, React, & Tailwind**.
+
+I should be able to access this page from http://localhost:3000/dashboard.
+
+Do not worry about re-creating the header or the footer.
+
+Only these sections:
+
+![Design 1](./public/img/mock-1.png)
+![Design 2](./public/img/mock-2.png)
+
+Design must also be **MOBILE FRIENDLY!**
+
+Full design and assets [here](https://xd.adobe.com/view/de34b3ec-0563-421d-bdf5-122777b136b5-8b67/screen/3e7e6e6d-66a3-4dc0-9184-7580a44d5286/)
 
 ## Learn More
 
@@ -37,3 +56,8 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## Questions
+
+If you have any questions about anything, please reach out to the person or team that administered this test to you.
+
+Other than that, happy coding!
