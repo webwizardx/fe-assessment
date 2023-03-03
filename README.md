@@ -47,6 +47,8 @@ Design must also be **MOBILE FRIENDLY!**
 
 Full design and assets [here](https://xd.adobe.com/view/de34b3ec-0563-421d-bdf5-122777b136b5-8b67/screen/3e7e6e6d-66a3-4dc0-9184-7580a44d5286/)
 
+Upon completion, please share the github link to the cloned/forked project.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
