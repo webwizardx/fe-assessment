@@ -45,7 +45,7 @@ export default function Home() {
           <i className="absolute right-0 bottom-0 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-sold-gray-4 text-center text-xs not-italic text-white md:hidden">
             i
           </i>
-          <div className="absolute top-0 -left-3 h-8 w-4 rounded bg-sold-orange-0"></div>
+          <span className="absolute top-0 -left-3 h-8 w-4 rounded bg-sold-orange-0"></span>
         </p>
         <section className="mb-12 flex flex-wrap gap-8 px-4">
           <div className="grow rounded border border-sold-gray-5 py-11 shadow-sm">
