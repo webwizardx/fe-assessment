@@ -1,10 +1,10 @@
 import Image from "next/image";
-import arrowRoundDownIcon from "../assets/img/arrow-round-down-icon.svg";
+import { arrowRoundDownIcon } from "@/assets";
 
 function RankingCard() {
   return (
     <div className="mx-auto px-4 xl:w-[70rem] xl:p-0">
-      <div className="-mt-96 mb-6 rounded-lg bg-white p-6 shadow-md xl:-mt-28 xl:mb-12 xl:flex xl:gap-20">
+      <div className="-mt-96 mb-6 rounded-lg bg-white p-6 shadow-md sm:shadow-none xl:-mt-28 xl:mb-12 xl:flex xl:gap-20">
         <div>
           <p className="mb-3 text-base xl:w-[27rem]">
             Our referrals are routed to the top performing agents in our
@@ -29,11 +29,13 @@ function RankingCard() {
         </div>
         <div className="bg-sold-gray-2 p-5">
           <div className="mb-3 flex xl:gap-5">
-            <strong className="w-60 text-lg">
+            <strong className="w-60 text-lg font-bold">
               Your average rank in the markets you serve is:
             </strong>
             <div className="flex items-center">
-              <span className="text-4xl text-sold-orange-1">25</span>
+              <strong className="text-4xl font-bold text-sold-orange-1">
+                25
+              </strong>
               <Image
                 className="mt-4"
                 src={arrowRoundDownIcon}

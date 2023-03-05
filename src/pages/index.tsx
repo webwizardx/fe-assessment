@@ -2,9 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import { EarningOverview, RankingCard } from "@/Components";
-import leadsIcon from "../assets/img/leads-icon.svg";
-import happyFaceIcon from "../assets/img/happy-face-icon.svg";
-import sadFaceIcon from "../assets/img/sad-face-icon.svg";
+import { happyFaceIcon, leadsIcon, sadFaceIcon } from "@/assets";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -20,7 +18,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${montserrat.variable} font-sans`}>
+      <main className={`${montserrat.variable} font-sans font-semibold`}>
         <section className="bg-sold-gray-0 px-4 pt-8 pb-96 xl:pb-36 xl:pt-20">
           <div className="mx-auto max-w-5xl xl:flex xl:flex-wrap xl:gap-28">
             <article className="mb-12">
@@ -32,7 +30,7 @@ export default function Home() {
                 worthless metrics like impressions or even leads. SOLD.com shows
                 you how many clients actually cross the finish line and buy or
                 sell a home.
-                <small className="mt-5 block pr-2 xl:p-0">
+                <small className="mt-5 block pr-2 text-sm xl:p-0">
                   After all, isn’t that the metric that matters most?
                 </small>
               </p>
@@ -52,9 +50,6 @@ export default function Home() {
         <section className="mb-12 flex flex-wrap gap-8 px-4">
           <div className="grow rounded border border-sold-gray-5 py-11 shadow-sm">
             <div className="px-11">
-              {/**
-               * Todo change to the proper icon
-               */}
               <Image className="mb-4" src={leadsIcon} alt="Leads icon" />
               <h2 className="mb-12 text-4xl">Opportunity</h2>
             </div>
@@ -135,7 +130,7 @@ export default function Home() {
             </div>
             <div className="mb-9 divide-y divide-dashed divide-sold-gray-6 px-11">
               <div className="flex justify-between py-5 first:pt-0 last:pb-0">
-                <span className="w-56 text-base">
+                <span className="w-40 text-base sm:w-56">
                   Appointments that signed with another agent
                 </span>
                 <span className="text-3xl font-bold text-sold-orange-0">

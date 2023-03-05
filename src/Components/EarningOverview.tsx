@@ -1,6 +1,5 @@
 import Image from "next/image";
-import salesIconOne from "../assets/img/sales-icon-1.svg";
-import salesIconTwo from "../assets/img/sales-icon-2.svg";
+import { salesIconOne, salesIconTwo } from "@/assets";
 
 function EarningOverview() {
   return (
@@ -15,9 +14,6 @@ function EarningOverview() {
           <small className="text-xs text-sold-gray-1">in sales</small>
         </div>
         <div className="flex flex-col sm:pl-4">
-          {/**
-           * Todo change to the proper icon
-           */}
           <Image className="mb-3" src={salesIconTwo} alt="Sales icon" />
           <span className="mb-1.5 text-3xl">$500K</span>
           <small className="text-xs text-sold-gray-1">
