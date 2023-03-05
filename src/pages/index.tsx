@@ -2,12 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import { EarningOverview, RankingCard } from "@/Components";
+import leadsIcon from "../assets/img/leads-icon.svg";
 import happyFaceIcon from "../assets/img/happy-face-icon.svg";
 import sadFaceIcon from "../assets/img/sad-face-icon.svg";
 
-const monserrat = Montserrat({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-montserrat",
 });
 
 export default function Home() {
@@ -19,31 +20,33 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${monserrat.variable} font-sans`}>
-        <section className=" bg-sold-gray-0 px-4 pt-8 pb-96">
-          <div className="mb-12">
-            <h1 className="mb-3.5 text-2xl font-bold text-white">
-              SOLD.com Difference
-            </h1>
-            <p className="text-sm text-white">
-              Unlike other lead sources and portals, we don’t focus on worthless
-              metrics like impressions or even leads. SOLD.com shows you how
-              many clients actually cross the finish line and buy or sell a
-              home.
-              <span className="mt-5 block pr-2">
-                After all, isn’t that the metric that matters most?
-              </span>
-            </p>
+      <main className={`${montserrat.variable} font-sans`}>
+        <section className="bg-sold-gray-0 px-4 pt-8 pb-96 xl:pb-36 xl:pt-20">
+          <div className="mx-auto max-w-5xl xl:flex xl:flex-wrap xl:gap-28">
+            <article className="mb-12">
+              <h1 className="mb-3.5 text-2xl font-bold text-white">
+                SOLD.com Difference
+              </h1>
+              <p className="text-sm text-white xl:w-[26.5rem]">
+                Unlike other lead sources and portals, we don’t focus on
+                worthless metrics like impressions or even leads. SOLD.com shows
+                you how many clients actually cross the finish line and buy or
+                sell a home.
+                <small className="mt-5 block pr-2 xl:p-0">
+                  After all, isn’t that the metric that matters most?
+                </small>
+              </p>
+            </article>
+            <EarningOverview />
           </div>
-          <EarningOverview />
         </section>
         <RankingCard />
-        <p className="relative mx-auto mb-8 w-80 px-4 text-base font-bold">
+        <p className="relative mx-auto mb-8 w-80 px-4 text-base font-bold md:ml-8  md:mb-5 md:w-auto">
           Since you joined our network, here’s what we’ve been up to in your zip
           codes:
-          <span className="absolute right-0 bottom-0 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-sold-gray-4 text-center text-xs text-white">
+          <i className="absolute right-0 bottom-0 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-sold-gray-4 text-center text-xs not-italic text-white md:hidden">
             i
-          </span>
+          </i>
           <div className="absolute top-0 -left-3 h-8 w-4 rounded bg-sold-orange-0"></div>
         </p>
         <section className="mb-12 flex flex-wrap gap-8 px-4">
@@ -52,11 +55,7 @@ export default function Home() {
               {/**
                * Todo change to the proper icon
                */}
-              <Image
-                className="mb-4"
-                src={happyFaceIcon}
-                alt="Happy face icon"
-              />
+              <Image className="mb-4" src={leadsIcon} alt="Leads icon" />
               <h2 className="mb-12 text-4xl">Opportunity</h2>
             </div>
             <div className="divide-y divide-dashed divide-sold-gray-6 px-11">
@@ -102,7 +101,7 @@ export default function Home() {
               />
               <h2 className="mb-12 text-4xl">Wins</h2>
             </div>
-            <div className="divide-y divide-dashed divide-sold-gray-6 px-11">
+            <div className="mb-9 divide-y divide-dashed divide-sold-gray-6 px-11">
               <div className="flex justify-between py-5 first:pt-0 last:pb-0">
                 <span className="w-44 text-base">Your signed agreements</span>
                 <span className="text-3xl font-bold text-sold-green-0">15</span>
@@ -134,9 +133,9 @@ export default function Home() {
               <Image className="mb-4" src={sadFaceIcon} alt="Sad face icon" />
               <h2 className="mb-12 text-4xl">Losses</h2>
             </div>
-            <div className="divide-y divide-dashed divide-sold-gray-6 px-11">
+            <div className="mb-9 divide-y divide-dashed divide-sold-gray-6 px-11">
               <div className="flex justify-between py-5 first:pt-0 last:pb-0">
-                <span className="w-44 text-base">
+                <span className="w-56 text-base">
                   Appointments that signed with another agent
                 </span>
                 <span className="text-3xl font-bold text-sold-orange-0">
